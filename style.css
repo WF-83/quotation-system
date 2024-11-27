@@ -1,0 +1,161 @@
+/* General Styling */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    padding: 20px 40px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center; /* Vertically centers the logo */
+}
+
+header img.header-logo {
+    max-width: 250px; /* Increased size for the logo */
+    height: auto;
+    display: block;
+}
+
+/* Main Container */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Section Cards */
+.section {
+    background: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+.section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Labels and Input Fields */
+label {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #555;
+    width: 150px;
+    display: inline-block;
+    margin-right: 15px;
+    text-align: left;
+}
+
+input {
+    width: calc(100% - 180px);
+    max-width: 400px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Adjustments for Table (Parts Details) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    table-layout: auto;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f8f8f8;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    color: #555;
+    font-weight: bold;
+}
+
+td input {
+    width: 90%;
+    padding: 8px;
+    font-size: 0.9rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Footer */
+footer {
+    text-align: center; /* Center-align the text */
+    background-color: #fff; /* Optional: Match header background */
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #666;
+    border-top: 1px solid #ddd; /* Optional: Subtle separation */
+}
+
+/* Buttons */
+button {
+    padding: 12px 25px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-right: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.button-primary {
+    background-color: #ffc107;
+    color: #333;
+    border: 1px solid #e0a800;
+}
+
+.button-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header img.header-logo {
+        max-width: 200px; /* Adjust size for smaller screens */
+    }
+
+    .form-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
