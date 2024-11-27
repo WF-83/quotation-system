@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotation Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="asset/AAZQMS.png" alt="Logo" class="header-logo">
+    </header>
+    <main>
+        <!-- Customer Details Section -->
+        <section class="section">
+            <h2>Customer Details</h2>
+            <div class="form-group">
+                <label for="customerName">Customer Name:</label>
+                <input type="text" id="customerName" placeholder="Enter customer name">
+            </div>
+            <div class="form-group">
+                <label for="carModel">Car Model:</label>
+                <input type="text" id="carModel" placeholder="Enter car model">
+            </div>
+            <div class="form-group">
+                <label for="carRegistration">Car Registration:</label>
+                <input type="text" id="carRegistration" placeholder="Enter car registration">
+            </div>
+        </section>
+
+        <!-- Parts Details Section -->
+        <section class="section">
+            <h2>Parts Details</h2>
+            <table id="parts-table">
+                <thead>
+                    <tr>
+                        <th>Part Details</th>
+                        <th>Supplier Price (RM)</th>
+                        <th>Quantity</th>
+                        <th>Markup (%)</th>
+                        <th>Price After Markup (RM)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" class="part-details" placeholder="Enter part details"></td>
+                        <td><input type="number" class="price-input" placeholder="0.00"></td>
+                        <td><input type="number" class="quantity" value="1"></td>
+                        <td><input type="number" class="markup-input" placeholder="0"></td>
+                        <td><input type="text" class="price-after-markup" readonly></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button id="add-row" class="button-primary">Add Part</button>
+            <div class="parts-summary">
+                <h3>Parts Summary</h3>
+                <p><strong>Total Parts Cost:</strong> RM <span id="total-parts-cost">0.00</span></p>
+                <p><strong>Total Markup Price:</strong> RM <span id="total-markup-price">0.00</span> (<span id="total-markup-margin">0.00</span>% Margin)</p>
+                <p><strong>Total Price After Markup:</strong> RM <span id="total-price-after-markup">0.00</span></p>
+            </div>
+        </section>
+
+        <!-- Code Optimization Services Section -->
+        <section class="section">
+            <h2>Code Optimization Services</h2>
+            <table id="optimization-services-table">
+                <thead>
+                    <tr>
+                        <th>Service Details</th>
+                        <th>Price (RM)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" class="optimization-part-details" placeholder="Enter service details"></td>
+                        <td><input type="number" class="optimization-price-input" placeholder="0.00"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button id="add-optimization-row" class="button-primary">Add Service</button>
+        </section>
+
+        <!-- Labor Details Section -->
+        <section class="section">
+            <h2>Labor Details</h2>
+            <div class="form-group">
+                <label for="laborCost">Labor Cost (RM):</label>
+                <input type="number" id="laborCost" placeholder="Enter labor cost">
+            </div>
+        </section>
+
+        <!-- Discount Section -->
+        <section class="section">
+            <h2>Discount</h2>
+            <div class="discount-container">
+                <div class="form-group">
+                    <label for="discountPercent">Discount (%):</label>
+                    <input type="number" id="discountPercent" placeholder="Enter discount percentage">
+                </div>
+                <div id="impact-insights" style="display: none;">
+                    <h3>Impact Insights</h3>
+                    <div>
+                        <p><strong>Parts Discount Impact:</strong></p>
+                        <p>Total Margin Price: RM <span id="total-margin-price">0.00</span></p>
+                        <p>Parts Discount: RM <span id="parts-discount">0.00</span></p>
+                        <p>Profit on Parts: RM <span id="profit-parts">0.00</span></p>
+                    </div>
+                    <div>
+                        <p><strong>Labor Discount Impact:</strong></p>
+                        <p>Labor Charge: RM <span id="labor-charge">0.00</span></p>
+                        <p>Labor Discount: RM <span id="labor-discount">0.00</span></p>
+                        <p>Labor Income: RM <span id="labor-income">0.00</span></p>
+                    </div>
+                    <div>
+                        <p><strong>Code Optimization Services Discount Impact:</strong></p>
+                        <p>COS Charge: RM <span id="cos-charge">0.00</span></p>
+                        <p>COS Discount: RM <span id="cos-discount">0.00</span></p>
+                        <p>COS Income: RM <span id="cos-income">0.00</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Summary Section -->
+        <section class="section">
+            <h2>Summary</h2>
+            <p><strong>Parts Cost:</strong> RM <span id="summary-parts-cost">0.00</span></p>
+            <p><strong>Profit on Parts:</strong> RM <span id="summary-profit-parts">0.00</span></p>
+            <p><strong>Labor Income:</strong> RM <span id="summary-labor-income">0.00</span></p>
+            <p><strong>Optimization Services Income:</strong> RM <span id="summary-optimization-income">0.00</span></p>
+            <p><strong>Grand Total:</strong> RM <span id="summary-grand-total">0.00</span></p>
+        </section>
+
+        <!-- Actions Section -->
+        <section class="section">
+            <h2>Actions</h2>
+            <div class="actions">
+                <button id="generate-internal-report" class="button-secondary">Generate Internal Report</button>
+                <button id="generate-customer-quotation" class="button-primary">Generate Customer Quotation</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Quotation Management System. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
